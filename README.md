@@ -7,15 +7,15 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-### SupportMe
+## SupportMe
 Servidor para aplicacion movil.
 
-## Ejecutar:
+### Ejecutar:
 1. "composer install"
 2. crear la base de datos "supportme"
 3. modificar el .env para la conexion con la base de datos 
 
-# Database:
+#### Database:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
