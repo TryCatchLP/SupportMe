@@ -36,7 +36,8 @@ class HuecaController extends Controller
      */
     public function show($id)
     {
-        return Huecas::find($id);
+        $hueca = Huecas::find($id);
+        return $hueca;
     }
 
     /**
