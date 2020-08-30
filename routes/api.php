@@ -32,3 +32,11 @@ Route::get('rating/{id}', 'RatingsController@show');
 Route::post('ratings', 'RatingsController@store');
 Route::put('rating/{id}', 'RatingsController@update');
 Route::delete('rating/{id}', 'RatingsController@delete');
+
+//=======================================
+
+Route::get("/menuses", "MenusesController@index");
+Route::get("/menuses/{id}", "MenusesControlle@show");
+Route::post("/menuses", "MenusesControlle@store");
+Route::put("/menuses/update/{id}", "MenusesControlle@update");
+Route::delete("/menuses/delete/{id}", "MenusesControlle@delete");
