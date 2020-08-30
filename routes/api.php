@@ -28,10 +28,10 @@ Route::delete("/huecas/delete/{id}", "HuecaController@destroy");
 //================ CRUD Ratings =======================
 
 Route::get('ratings', 'RatingsController@index');
-Route::get('rating/{id}', 'RatingsController@show');
+Route::get('ratings/{id}', 'RatingsController@show');
 Route::post('ratings', 'RatingsController@store');
-Route::put('rating/{id}', 'RatingsController@update');
-Route::delete('rating/{id}', 'RatingsController@delete');
+Route::put('ratings/{id}', 'RatingsController@update');
+Route::delete('ratings/{id}', 'RatingsController@delete');
 
 //================ CRUD Menuses =======================
 

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-Use App\Ratings;
+use App\Ratings;
 use Illuminate\Http\Request;
 
 class RatingsController extends Controller
@@ -12,9 +12,9 @@ class RatingsController extends Controller
         return Ratings::all();
     }
 
-    public function show($id)
+    public function show(Ratings $id)
     {
-        return Ratings::find($id);
+        return $id;
     }
 
     public function store(Request $request)
@@ -24,18 +24,16 @@ class RatingsController extends Controller
         return response()->json($rating, 201);
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Ratings $id)
     {
-        $rating = Huecas::findOrFail($id);
-        $rating->update($request->all());
+        $id->update($request->all());
 
-        return response()->json($$rating, 200);
+        return response()->json($id, 200);
     }
 
-    public function delete($id)
+    public function delete(Ratings $id)
     {
-        $rating = Huecas::findOrFail($id);
-        $rating->delete();
+        $id->delete();
 
         return response()->json(null, 204);
     }
