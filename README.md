@@ -18,9 +18,13 @@ Servidor para aplicacion movil.
 
 #### Database:
 DB_CONNECTION=mysql<br/>
-DB_HOST=127.0.0.1<br/>
+DB_HOST=remotemysql.com<br/>
 DB_PORT=3306<br/>
-DB_DATABASE=supportme<br/>
+DB_DATABASE=RZCypH8UH2<br/>
+
+### Correr el server
+php artisan serve
+
 
 #### Endpoints:
 <table>
@@ -126,11 +130,6 @@ DB_DATABASE=supportme<br/>
         </tr>
     </tbody>
 </table>
-
-
-
-### Correr el server
-php artisan serve
 
 
 ## Laravel Sponsors
