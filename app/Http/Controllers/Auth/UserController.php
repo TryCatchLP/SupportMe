@@ -10,8 +10,6 @@ use Validator;
 
 class UserController extends Controller
 {
-    
-
     public $successStatus = 200;
     
     /** 
@@ -35,8 +33,7 @@ class UserController extends Controller
      * 
      * @return \Illuminate\Http\Response 
      */ 
-    public function register(Request $request) 
-    { 
+    public function register(Request $request){ 
         $validator = Validator::make($request->all(), [ 
             'username' => 'required', 
             'email' => 'required|email', 
@@ -47,7 +44,7 @@ class UserController extends Controller
         if ($validator->fails()) { 
             return response()->json(['error'=>$validator->errors()], 401);            
         }
-        
+
         $input = $request->all(); 
         $input['password'] = bcrypt($input['password']); 
         $user = User::create($input); 
@@ -62,8 +59,7 @@ class UserController extends Controller
      * 
      * @return \Illuminate\Http\Response 
      */ 
-    public function details() 
-    { 
+    public function details() { 
         $user = Auth::user(); 
         return response()->json(['success' => $user], $this-> successStatus); 
     } 
