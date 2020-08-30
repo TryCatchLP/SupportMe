@@ -25,3 +25,10 @@ Route::post("/huecas", "HuecaController@store");
 Route::put("/huecas/update/{id}", "HuecaController@update");
 Route::delete("/huecas/delete/{id}", "HuecaController@destroy");
 
+//=======================================
+
+Route::get('ratings', 'RatingsController@index');
+Route::get('rating/{id}', 'RatingsController@show');
+Route::post('ratings', 'RatingsController@store');
+Route::put('rating/{id}', 'RatingsController@update');
+Route::delete('rating/{id}', 'RatingsController@delete');

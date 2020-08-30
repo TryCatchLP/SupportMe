@@ -23,7 +23,6 @@ DB_PORT=3306<br/>
 DB_DATABASE=supportme<br/>
 
 
-
 ### Correr el server
 php artisan serve
 
