@@ -22,6 +22,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get("/huecas", "HuecaController@index");
 Route::get("/huecas/{id}", "HuecaController@show");
 Route::post("/huecas", "HuecaController@store");
+Route::put("/huecas/update/{id}", "HuecaController@update");
+Route::delete("/huecas/delete/{id}", "HuecaController@destroy");
 
 //=======================================
 
