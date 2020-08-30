@@ -25,7 +25,7 @@ Route::post("/huecas", "HuecaController@store");
 Route::put("/huecas/update/{id}", "HuecaController@update");
 Route::delete("/huecas/delete/{id}", "HuecaController@destroy");
 
-//=======================================
+//================ CRUD Ratings =======================
 
 Route::get('ratings', 'RatingsController@index');
 Route::get('rating/{id}', 'RatingsController@show');
@@ -33,10 +33,18 @@ Route::post('ratings', 'RatingsController@store');
 Route::put('rating/{id}', 'RatingsController@update');
 Route::delete('rating/{id}', 'RatingsController@delete');
 
-//=======================================
+//================ CRUD Menuses =======================
 
 Route::get("/menuses", "MenusesController@index");
 Route::get("/menuses/{id}", "MenusesControlle@show");
 Route::post("/menuses", "MenusesControlle@store");
 Route::put("/menuses/update/{id}", "MenusesControlle@update");
 Route::delete("/menuses/delete/{id}", "MenusesControlle@delete");
+
+//================ Login and register =======================
+
+Route::post('login', 'Auth\UserController@login');
+Route::post('register', 'Auth\UserController@register');
+Route::group(['middleware' => 'auth:api'], function(){
+    Route::post('details', 'Auth\UserController@details');
+});

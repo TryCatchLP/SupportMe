@@ -12,9 +12,9 @@ class RatingsController extends Controller
         return Ratings::all();
     }
 
-    public function show(Ratings $id)
+    public function show($id)
     {
-        return $id;
+        return Ratings::find($id);
     }
 
     public function store(Request $request)
@@ -24,16 +24,18 @@ class RatingsController extends Controller
         return response()->json($rating, 201);
     }
 
-    public function update(Request $request, Ratings $id)
+    public function update(Request $request, $id)
     {
-        $id->update($request->all());
+        $rating = Huecas::findOrFail($id);
+        $rating->update($request->all());
 
-        return response()->json($id, 200);
+        return response()->json($$rating, 200);
     }
 
-    public function delete(Ratings $id)
+    public function delete($id)
     {
-        $id->delete();
+        $rating = Huecas::findOrFail($id);
+        $rating->delete();
 
         return response()->json(null, 204);
     }
