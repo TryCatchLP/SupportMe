@@ -106,20 +106,20 @@ php artisan serve
         </tr>
         <tr>
             <td>POST</td>
-            <td>Yuleixi</td>
+            <td>Crea una menu nuevo</td>
         </tr>
         <tr>
             <td rowspan="3"><a href="/api/menu/{id}">/api/menu/{id_menu}</a></td>
             <td>GET</td>
-            <td>Yuleixi</td>
+            <td>Devuelve el menu con identificador id</td>
         </tr>
         <tr>
             <td>PUT</td>
-            <td>Yuleixi</td>
+            <td>Actualiza el menu</td>
         </tr>
         <tr>
             <td>DELETE</td>
-            <td>Yuleixi</td>
+            <td>Elimina un menu</td>
         </tr>
     </tbody>
 </table>
