@@ -36,15 +36,16 @@ Route::delete('ratings/{id}', 'RatingsController@delete');
 //================ CRUD Menuses =======================
 
 Route::get("/menuses", "MenusesController@index");
-Route::get("/menuses/{id}", "MenusesControlle@show");
-Route::post("/menuses", "MenusesControlle@store");
-Route::put("/menuses/update/{id}", "MenusesControlle@update");
-Route::delete("/menuses/delete/{id}", "MenusesControlle@delete");
+Route::get("/menuses/{id}", "MenusesController@show");
+Route::post("/menuses", "MenusesController@store");
+Route::put("/menuses/update/{id}", "MenusesController@update");
+Route::delete("/menuses/delete/{id}", "MenusesController@delete");
 
 //================ Login and register =======================
 
 Route::post('login', 'Auth\UserController@login');
 Route::post('profile', 'Auth\UserController@register');
+Route::put('profile', 'Auth\UserController@update');
 Route::group(['middleware' => 'auth:api'], function(){
     Route::get('profile', 'Auth\UserController@details');
 });

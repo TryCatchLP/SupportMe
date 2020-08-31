@@ -63,4 +63,19 @@ class UserController extends Controller
         $user = Auth::user(); 
         return response()->json(['success' => $user], $this-> successStatus); 
     } 
+
+    public function update(Request $request,  $id)
+    {
+
+        $user = User::findOrFail($id);
+        $user->email = $request->email;
+        $user->firstname = $request->firstname;
+        $user->lastname = $request->lastname;
+        $user->address = $request->address;
+        $user->phone = $request->phone;     
+
+        $user->save();
+        
+        return response()->json($id, 200);  
+    }
 }

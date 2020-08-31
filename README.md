@@ -47,7 +47,7 @@ php artisan serve
         </tr>
         <tr>
             <td>PUT</td>
-            <td>Yuleixi</td>
+            <td>Actualiza los datos del usuario</td>
         </tr>
         <tr>
             <td><a href="/api/login">/api/login</a></td>
@@ -102,7 +102,7 @@ php artisan serve
         <tr>
             <td rowspan="2"><a href="/api/menu">/api/menu</a></td>
             <td>GET</td>
-            <td>Yuleixi</td>
+            <td>Obtiene todos los menuses</td>
         </tr>
         <tr>
             <td>POST</td>

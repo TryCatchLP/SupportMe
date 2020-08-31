@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Menuses;
+
 class MenusesController extends Controller
 {
     public function index()
@@ -13,7 +15,8 @@ class MenusesController extends Controller
 
     public function show(Menuses $id)
     {
-        return $id;
+        $menuses = Menuses::find($id);
+        return $menuses;
     }
 
     public function store(Request $request)
@@ -25,9 +28,10 @@ class MenusesController extends Controller
 
     public function update(Request $request, Menuses $id)
     {
-        $id->update($request->all());
+        $menuses= Menuses::findOrFail($id);
+        $menuses->update($request->all());
 
-        return response()->json($id, 200);
+        return $menuses;
     }
 
     public function delete(Menuses $id)
