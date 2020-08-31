@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Huecas;
 use Illuminate\Http\Request;
+use App\Menuses;
+use App\Huecasmenuses;
 
 class HuecaController extends Controller
 {
@@ -25,7 +27,19 @@ class HuecaController extends Controller
      */
     public function store(Request $request)
     {
-        return Huecas::create($request->all());
+
+        $hueca = Huecas::create($request->hueca);
+        $menues = $request->menues;
+        foreach($menues as $menu){
+            $data = Menuses::create($menu["menu"]);
+            Huecasmenuses::create([
+                'menu_id' => $data->id,
+                'hueca_id' => $hueca->id,
+                'price' => $menu["price"]
+            ]);
+        }
+
+        return $hueca;
     }
 
     /**

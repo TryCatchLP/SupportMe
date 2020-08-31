@@ -22,8 +22,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get("/huecas", "HuecaController@index");
 Route::get("/huecas/{id}", "HuecaController@show");
 Route::post("/huecas", "HuecaController@store");
-Route::put("/huecas/update/{id}", "HuecaController@update");
-Route::delete("/huecas/delete/{id}", "HuecaController@destroy");
+Route::put("/huecas/{id}", "HuecaController@update");
+Route::delete("/huecas/{id}", "HuecaController@destroy");
 
 //================ CRUD Ratings =======================
 
@@ -49,3 +49,7 @@ Route::put('profile', 'Auth\UserController@update');
 Route::group(['middleware' => 'auth:api'], function(){
     Route::get('profile', 'Auth\UserController@details');
 });
+
+//================ CRUD Huecasmenuses =======================
+Route::get('/menu/hueca/{id}', 'HuecaMenuController@showall');
+Route::put('/menu/hueca', 'HuecaMenuController@update');

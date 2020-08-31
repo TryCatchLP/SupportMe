@@ -57,16 +57,16 @@ php artisan serve
         <tr>
             <td rowspan="2"><a href="/api/huecas">/api/huecas</a></td>
             <td>GET</td>
-            <td>Kenny</td>
+            <td>Devuelve todas las huecas registradas</td>
         </tr>
         <tr>
             <td>POST</td>
-            <td>Kenny</td>
+            <td>Crea una nueva hueca</td>
         </tr>
         <tr>
             <td><a href="/api/huecas/{id}">/api/huecas/{id}</a></td>
             <td>GET</td>
-            <td>Kenny</td>
+            <td>Devuelve la hueca con identificador id</td>
         </tr>
         <tr>
             <td rowspan="2"><a href="/api/rating">/api/ratings</a></td>
@@ -91,13 +91,13 @@ php artisan serve
             <td>Elimina un atributo.</td>
         </tr>
         <tr>
-            <td rowspan="2"><a href="/api/menu/{id_hueca}">/api/menu/{id_hueca}</a></td>
+            <td rowspan="2"><a href="/api/menu/hueca/{id}">/api/menu/{id}</a></td>
             <td>GET</td>
-            <td>Kenny</td>
+            <td>Retorna los menues de la hueca id</td>
         </tr>
         <tr>
             <td>PUT</td>
-            <td>Kenny</td>
+            <td>Permite actualizar los menues asociados con una hueca id</td>
         </tr>
         <tr>
             <td rowspan="2"><a href="/api/menu">/api/menu</a></td>
