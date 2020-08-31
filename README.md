@@ -31,8 +31,8 @@ php artisan serve
     <thead>
         <tr>
             <th scope="row">Path</th>
-            <th>Método<th>
-            <th>Descripción<th>
+            <th>Método</th>
+            <th>Descripción</th>
         </tr>
     </thead>
     <tbody>
@@ -50,7 +50,7 @@ php artisan serve
             <td>Yuleixi</td>
         </tr>
         <tr>
-            <td><a href="/api/login">/api/login</a></>
+            <td><a href="/api/login">/api/login</a></td>
             <td>POST</td>
             <td>Permite iniciar sesión con un usuario existente.</td>
         </tr>
