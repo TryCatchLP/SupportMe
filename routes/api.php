@@ -44,7 +44,7 @@ Route::delete("/menuses/delete/{id}", "MenusesControlle@delete");
 //================ Login and register =======================
 
 Route::post('login', 'Auth\UserController@login');
-Route::post('register', 'Auth\UserController@register');
+Route::post('profile', 'Auth\UserController@register');
 Route::group(['middleware' => 'auth:api'], function(){
-    Route::get('details', 'Auth\UserController@details');
+    Route::get('profile', 'Auth\UserController@details');
 });

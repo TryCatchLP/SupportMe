@@ -30,7 +30,7 @@ php artisan serve
 <table>
     <thead>
         <tr>
-            <th>Path</th>
+            <th scope="row">Path</th>
             <th>Método<th>
             <th>Descripción<th>
         </tr>
@@ -39,93 +39,86 @@ php artisan serve
         <tr>
             <td rowspan="3"><a href="/api/profile">/api/profile</a></td>
             <td>GET</td>
-            <td></td>
-            <td>Steven</td>
+            <td>Obtiende los datos del usuario logueado.</td>
         </tr>
         <tr>
             <td>POST</td>
-            <td></td>
-            <td>Steven</td>
+            <td>Crea un usuario.</td>
         </tr>
         <tr>
             <td>PUT</td>
-            <td></td>
             <td>Yuleixi</td>
         </tr>
         <tr>
-            <td><a href="/login">/login</a></>
+            <td><a href="/api/login">/api/login</a></>
             <td>POST</td>
-            <td></td>
-            <td>Steven</td>
+            <td>Permite iniciar sesión con un usuario existente.</td>
         </tr>
         <tr>
             <td rowspan="2"><a href="/api/huecas">/api/huecas</a></td>
             <td>GET</td>
-            <td></td>
             <td>Kenny</td>
         </tr>
         <tr>
             <td>POST</td>
-            <td></td>
             <td>Kenny</td>
         </tr>
         <tr>
             <td><a href="/api/huecas/{id}">/api/huecas/{id}</a></td>
             <td>GET</td>
-            <td></td>
             <td>Kenny</td>
         </tr>
         <tr>
-            <td rowspan="4"><a href="/api/rating">/api/rating</a></td>
+            <td rowspan="2"><a href="/api/rating">/api/ratings</a></td>
             <td>GET</td>
-            <td></td>
-            <td>Steven</td>
+            <td>Obtiene todas los ratings.</td>
         </tr>
         <tr>
             <td>POST</td>
-            <td></td>
-            <td>Steven</td>
+            <td>Crea un atributo.</td>
+        </tr>
+        <tr>
+            <td rowspan="3"><a href="/api/rating/{id}">/api/ratings/{id}</a></td>
+            <td>GET</td>
+            <td>Obtiene un atributo por su id.</td>
         </tr>
         <tr>
             <td>PUT</td>
-            <td></td>
-            <td>Steven</td>
+            <td>Actualiza un atributo.</td>
         </tr>
         <tr>
             <td>DELETE</td>
-            <td></td>
-            <td>Steven</td>
+            <td>Elimina un atributo.</td>
         </tr>
         <tr>
             <td rowspan="2"><a href="/api/menu/{id_hueca}">/api/menu/{id_hueca}</a></td>
             <td>GET</td>
-            <td></td>
             <td>Kenny</td>
         </tr>
         <tr>
             <td>PUT</td>
-            <td></td>
             <td>Kenny</td>
         </tr>
         <tr>
-            <td rowspan="4"><a href="/api/menu">/api/menu</a></td>
+            <td rowspan="2"><a href="/api/menu">/api/menu</a></td>
             <td>GET</td>
-            <td></td>
             <td>Yuleixi</td>
         </tr>
         <tr>
             <td>POST</td>
-            <td></td>
+            <td>Yuleixi</td>
+        </tr>
+        <tr>
+            <td rowspan="3"><a href="/api/menu/{id}">/api/menu/{id_menu}</a></td>
+            <td>GET</td>
             <td>Yuleixi</td>
         </tr>
         <tr>
             <td>PUT</td>
-            <td></td>
             <td>Yuleixi</td>
         </tr>
         <tr>
             <td>DELETE</td>
-            <td></td>
             <td>Yuleixi</td>
         </tr>
     </tbody>
