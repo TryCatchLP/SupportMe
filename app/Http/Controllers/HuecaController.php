@@ -27,7 +27,26 @@ class HuecaController extends Controller
      */
     public function store(Request $request)
     {
-
+	
+	/*
+	'hueca': {
+		"name": "", 
+        "descrip": "descrip",
+        "lat": -2.126055,
+        "lng": -79.917295, 
+        "address": "asasd", 
+        "photo": "C://",
+        "phone": 2316545465, 
+        "stars": 0,
+        "ratings": 0
+		},
+	'menues': [
+		{"menu": {title, ingredients}, 
+		 "price": 4677.566}, 
+		{''menu": {title, ingredients}, 
+		 "price": 4677.566}
+		]
+	*/
         $hueca = Huecas::create($request->hueca);
         $menues = $request->menues;
         foreach($menues as $menu){

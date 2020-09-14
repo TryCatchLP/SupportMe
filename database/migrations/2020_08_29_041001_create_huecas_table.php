@@ -20,6 +20,7 @@ class CreateHuecasTable extends Migration
             $table->double('lat');
             $table->double('lng');
             $table->string('address', 300);
+            $table->string('schedule', 500);
             $table->string('photo', 300);
             $table->string('phone', 15);
             $table->integer('stars');
