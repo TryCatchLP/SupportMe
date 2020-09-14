@@ -50,6 +50,10 @@ Route::group(['middleware' => 'auth:api'], function(){
     Route::get('profile', 'Auth\UserController@details');
 });
 
+Route::name('nologin')->get('/nologin', function(Request $request){
+    return response()->json(['error'=>'Unauthorised'], 401);
+});
+
 //================ CRUD Huecasmenuses =======================
 Route::get('/menu/hueca/{id}', 'HuecaMenuController@showall');
 Route::put('/menu/hueca', 'HuecaMenuController@update');
