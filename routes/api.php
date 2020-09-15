@@ -28,9 +28,9 @@ Route::delete("/huecas/{id}", "HuecaController@destroy");
 //================ CRUD Ratings =======================
 
 Route::get('ratings', 'RatingsController@index');
-Route::get('ratings/{id}', 'RatingsController@show');
-Route::post('ratings', 'RatingsController@store');
-Route::put('ratings/{id}', 'RatingsController@update');
+Route::middleware('auth:api')->get('ratings/{id}', 'RatingsController@show');
+Route::middleware('auth:api')->post('ratings', 'RatingsController@store');
+Route::middleware('auth:api')->put('ratings/{id}', 'RatingsController@update');
 Route::delete('ratings/{id}', 'RatingsController@delete');
 
 //================ CRUD Menuses =======================
