@@ -56,6 +56,10 @@ class RatingsController extends Controller
 
     public function delete(Ratings $id)
     {
+        $hueca = Huecas::find($id->hueca_id);
+        $hueca->stars -= $id->stars;
+        $hueca->ratings -= 1;
+        $hueca->save();
         $id->delete();
 
         return response()->json(null, 204);
