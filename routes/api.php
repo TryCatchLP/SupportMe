@@ -45,9 +45,10 @@ Route::delete("/menuses/delete/{id}", "MenusesController@delete");
 
 Route::post('login', 'Auth\UserController@login');
 Route::post('profile', 'Auth\UserController@register');
-Route::put('profile', 'Auth\UserController@update');
+
 Route::group(['middleware' => 'auth:api'], function(){
     Route::get('profile', 'Auth\UserController@details');
+    Route::put('profile', 'Auth\UserController@update');
 });
 
 Route::name('nologin')->get('/nologin', function(Request $request){

@@ -64,10 +64,10 @@ class UserController extends Controller
         return response()->json(['success' => $user], $this-> successStatus); 
     } 
 
-    public function update(Request $request,  $id)
+    public function update(Request $request)
     {
 
-        $user = User::findOrFail($id);
+	$user = Auth::user();
         $user->email = $request->email;
         $user->firstname = $request->firstname;
         $user->lastname = $request->lastname;
@@ -76,6 +76,6 @@ class UserController extends Controller
 
         $user->save();
         
-        return response()->json($id, 200);  
+        return response()->json(['sucess'=>'sucess'], 200);  
     }
 }
