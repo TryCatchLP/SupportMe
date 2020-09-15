@@ -31,7 +31,7 @@ Route::middleware('auth:api')->get('ratings', 'RatingsController@index');
 Route::middleware('auth:api')->get('ratings/{id}', 'RatingsController@show');
 Route::middleware('auth:api')->post('ratings', 'RatingsController@store');
 Route::middleware('auth:api')->put('ratings/{id}', 'RatingsController@update');
-Route::delete('ratings/{id}', 'RatingsController@delete');
+Route::middleware('auth:api')->delete('ratings/{id}', 'RatingsController@delete');
 
 //================ CRUD Menuses =======================
 
