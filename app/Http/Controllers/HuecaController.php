@@ -48,8 +48,9 @@ class HuecaController extends Controller
 		]
     */
         $url = $request->file('photo')->store('huecas', 'public');
-        $request->hueca["photo"] = "storage/".$url;
-        $hueca = Huecas::create($request->hueca);
+        $hueca = $request->hueca;
+        $hueca["photo"] = "storage/".$url;
+        $hueca = Huecas::create($hueca);
         $menues = $request->menues;
         foreach($menues as $menu){
             $data = Menuses::create($menu["menu"]);
