@@ -8,9 +8,13 @@ use Illuminate\Http\Request;
 
 class RatingsController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return Ratings::all();
+        $ratings =  Ratings::where("user_id", $request->user()->id)->get();
+        foreach($ratings as $rating){
+            $rating["huecaname"] = Huecas::find($rating->hueca_id)->name;
+        }
+        return $ratings;
     }
 
     public function show(Request $request, $id)
