@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Huecas;
 use App\Ratings;
+use App\User;
 use Illuminate\Http\Request;
 
 class RatingsController extends Controller
@@ -59,5 +60,14 @@ class RatingsController extends Controller
         $id->delete();
 
         return response()->json(null, 204);
+    }
+
+    public function showRatingsByMenu(Huecas $id)
+    {
+        $ratings = Ratings::where("hueca_id", $id->id)->get();
+        foreach($ratings as $rating){
+            $rating["username"] = User::find($rating->user_id)->username;
+        }
+        return $ratings;
     }
 }

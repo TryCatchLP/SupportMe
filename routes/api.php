@@ -32,6 +32,7 @@ Route::middleware('auth:api')->get('ratings/{id}', 'RatingsController@show');
 Route::middleware('auth:api')->post('ratings', 'RatingsController@store');
 Route::middleware('auth:api')->put('ratings/{id}', 'RatingsController@update');
 Route::delete('ratings/{id}', 'RatingsController@delete');
+Route::get('/ratings/hueca/{id}', 'RatingsController@showRatingsByMenu');
 
 //================ CRUD Menuses =======================
 
